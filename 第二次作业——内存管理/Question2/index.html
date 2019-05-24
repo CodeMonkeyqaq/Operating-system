@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<title>内存管理</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="Keywords" content="操作系统 内存管理" />
+		<meta name="author" content="1652977王星洲" />
+		<meta name="description" content="操作系统课程作业二——内存管理" />
+		<link rel="shortcut icon" href="favicon.ico" type="img/x-icon" />
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+	</head>
+
+	<body background="webBackGround.jpg">
+
+		<div class="container">
+
+			<br>
+			<div class="text-center">
+				<h1>操作系统作业二<br>
+				<small>请求调页存储管理方式模拟</small></h1>
+				<br />
+				<p>作者：1652977 王星洲</p>
+				<br>
+				<h4>请选择您希望的算法</h4>
+				<br>
+			</div>
+
+			<div id="main">
+				<div class="row">
+					<div class="custom-control custom-radio col-md-3"> </div>
+					<div class="custom-control custom-radio col-md-3">
+						<input type="radio" id="FIFORatio" name="customRadio" class="custom-control-input" value="FIFO" checked>
+						<label class="custom-control-label" for="FIFORatio">先进先出(FIFO)算法</label>
+					</div>
+
+					<div class="custom-control custom-radio col-md-3">
+						<input type="radio" id="LRURatio" name="customRadio" class="custom-control-input" value="LRU">
+						<label class="custom-control-label" for="LRURatio">最近最久未使用(LRU)算法</label>
+						<div class="custom-control custom-radio col-md-3"> </div>
+					</div>
+				</div>
+
+			</div>
+
+			<br>
+
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-6">
+					<div class="card">
+						<div class="card-body">
+							<br>
+							<h4>结果</h4>
+							<br>
+							<p>缺页次数: <span id="missPageNumber" style="color: red;"><b>0</b></span>次</p>
+							<p>缺页率: <span id="missPageRate" style="color: red;"><b>0</b></span>%</p>
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+
+			<br>
+			<center>
+				<button id="startButton" type="button" class="btn btn-danger">查看模拟结果</button>
+			</center>
+			<br>
+
+			<div class="card">
+				<div class="card-body">
+					<br>
+					<span style="font-weight: 800;">模拟运行信息</span>
+
+					<br><br>
+
+					<div class="row">
+						<div class="col-md-12">
+							<div style="height:500px; overflow-y:scroll; overflow-x:none;">
+								<table class="table table-hover" id="memoryTable" height="300px">
+									<thead>
+										<tr>
+											<th scope="col">指令</th>
+											<th scope="col">内存块1</th>
+											<th scope="col">内存块2</th>
+											<th scope="col">内存块3</th>
+											<th scope="col">内存块4</th>
+											<th scope="col">操作</th>
+										</tr>
+									</thead>
+									<tbody>
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+
+</html>
